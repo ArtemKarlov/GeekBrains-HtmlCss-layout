@@ -1,79 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style/main.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css"> </head>
+
 <body>
-   <div class="main-container">
-      <div class="slider padding-site">
-          <header class="header clearfix">
-              <a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
-              <nav class="menu">
+    <div class="main-container">
+<!--First slider-->
+        <div class="slider padding-site">
+            <header class="header clearfix">
+                <a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+                <nav class="menu">
                     <ul class="clearfix">
                         <li class="menu-list"><a href="#" class="menu-link menu-link-active">HOME</a></li>
                         <li class="menu-list"><a href="#" class="menu-link">PRODUCTS</a></li>
                         <li class="menu-list"><a href="#" class="menu-link">HISTORY</a></li>
                         <li class="menu-list"><a href="#" class="menu-link">SHOWROOM</a></li>
                         <li class="menu-list"><a href="#" class="menu-link">CONTACT</a></li>
-                        <li class="menu-list"><a href="#" class="menu-link"><img src="img/search.svg" alt="search"></a></li>
+                        <li class="menu-list">
+                            <a href="#" class="menu-link"><img src="img/search.svg" alt="search"></a>
+                        </li>
                     </ul>
-              </nav>
-          </header>
-          <div class="slider-content">
-              <p class="slider-topic">TRENDING</p>
-              <h2 class="slider-h2">Fishnet Chair</h2>
-              <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
- or highly polished chrome.</p>
-             <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a>
-          </div>
-          <div class="pagination">
-              <a href="#" class="circle"></a><a href="#" class="circle circle-active"></a><a href="#" class="circle"></a>
-          </div>
-      </div>
+                </nav>
+            </header>
+            <div class="slider-content">
+                <p class="slider-topic">TRENDING</p>
+                <h2 class="slider-h2">Fishnet Chair</h2>
+                <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p> <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a> </div>
+            <div class="pagination">
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle circle-active"></a>
+                <a href="#" class="circle"></a>
+            </div>
+        </div>
 <!--   Products    -->
         <section class="products padding-site">
             <div class="products-header clearfix">
                 <ul class="products-menu clearfix">
-                <li class="menu-list"><a href="#" class="products-menu-link products-menu-link-active">Featured</a></li>
-                <li class="menu-list"><a href="#" class="products-menu-link">New</a></li>
-            </ul>
-            <a href="" class="button-text explore-all">explore all<img src="img/arrow.svg" alt=""></a>
-            </div>
+                    <li class="menu-list"><a href="#" class="products-menu-link products-menu-link-active">Featured</a></li>
+                    <li class="menu-list"><a href="#" class="products-menu-link">New</a></li>
+                </ul> <a href="" class="button-text explore-all">explore all<img src="img/arrow.svg" alt=""></a> </div>
             <div class="product-item-box">
-                <div class="product-item"><img src="img/products/back.svg" alt="product-1"></div>
+                <div class="product-item product-item-hover">
+                    <a href="#" class="product-item-hover-button"><img src="img/arrow.svg" alt=""></a>
+                    <h2 class="product-item-hover-h2">Fishnet Chair</h2>
+                    <p class="product-item-hover-text">Seat and back with upholstery made of cold cure foam</p>
+                
+                </div>
+                <div class="product-item"><img src="img/products/product-1.jpg" alt="product-1"></div>
                 <div class="product-item"><img src="img/products/product-2.jpg" alt="product-2"></div>
                 <div class="product-item"><img src="img/products/product-3.jpg" alt="product-3"></div>
                 <div class="product-item"><img src="img/products/product-4.jpg" alt="product-4"></div>
             </div>
         </section>
 <!--Exclusive-->
-      <section class="exclusive">
-         <div class="exclusive-item">
-             <div class="slider-content">
-                 <p class="slider-topic">exclusive</p>
-                 <h2 class="slider-h2">Fishnet Chair</h2>
-                 <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt
- powder-coated black
- or highly polished chrome.</p>
-                 <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a>
-             </div>
-         </div>
-         <div class="exclusive-item">
-             <div class="slider-content">
-                 <p class="slider-topic">exclusive</p>
-                 <h2 class="slider-h2">Fishnet Chair</h2>
-                 <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt
- powder-coated black
- or highly polished chrome.</p>
-                 <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a>
-             </div>
-         </div>
-          
-      </section>
-       <footer class="footer">footer</footer>
-   </div>
+        <section class="exclusive clearfix">
+            <div class="exclusive-item">
+                <div class="exclusive-content">
+                    <p class="slider-topic exclusive-topic">exclusive</p>
+                    <h2 class="exclusive-h2">Fishnet Chair</h2>
+                    <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p> <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a> </div>
+            </div>
+            <div class="exclusive-item">
+                <div class="exclusive-content">
+                    <p class="slider-topic exclusive-topic">exclusive</p>
+                    <h2 class="exclusive-h2">Fishnet Chair</h2>
+                    <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p> <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a> </div>
+            </div>
+        </section>
+<!--Trenfing-->
+        <section class="tranding products padding-site">
+            <div class="products-header clearfix">
+                <h2 class="products-menu exclusive-h2">Trending Products</h2> <a href="" class="button-text explore-all">explore all<img src="img/arrow.svg" alt=""></a> </div>
+            <div class="product-item-box">
+                <div class="trending-item"><img src="img/tranding/product-11.jpg" alt="product-11"></div>
+                <div class="trending-item"><img src="img/tranding/product-21.jpg" alt="product-21"></div>
+                <div class="trending-item"><img src="img/tranding/product-31.jpg" alt="product-31"></div>
+                <div class="trending-item"><img src="img/tranding/product-41.jpg" alt="product-41"></div>
+                <div class="trending-item"><img src="img/tranding/product-5.jpg" alt="product-5"></div>
+                <div class="trending-item"><img src="img/tranding/product-6.jpg" alt="product-6"></div>
+            </div>
+        </section>
+<!--Second slider-->
+        <div class="slider-2 slider padding-site">
+            <div class="slider-content">
+                <p class="slider-topic">TRENDING</p>
+                <h2 class="slider-h2">Fishnet Chair</h2>
+                <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p> <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a> </div>
+            <div class="pagination">
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle circle-active"></a>
+                <a href="#" class="circle"></a>
+            </div>
+        </div>
+<!--Exclusive & products-->
+        <section class="products padding-site clearfix">
+            <div class="exclusive-product-item">
+                <div class="exclusive-mini-content">
+                    <p class="slider-topic exclusive-topic">exclusive</p>
+                    <h2 class="exclusive-h2">Fishnet Chair</h2>
+                    <p class="slider-text">Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black or highly polished chrome.</p> <a href="#" class="button button-text">Order Us <img src="img/arrow.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="exclusive-product-item">
+                <div class="product-item-box">
+                    <div class="product-item"><img src="img/products/product-2-sm.jpg" alt="product-2-sm"></div>
+                    <div class="product-item"><img src="img/products/product-3-sm.jpg" alt="product-3-sm"></div>
+                    <div class="product-item"><img src="img/products/product-4-sm.jpg" alt="product-4-sm"></div>
+                    <div class="product-item"><img src="img/products/product-5-sm.jpg" alt="product-5-sm"></div>
+                </div>
+            </div>
+        </section>
+<!--Mobile APP-->
+       <section class="mobile padding-site">
+           <div class="mobile-content">
+               <p class="slider-topic mobile-topic">mobile app</p>
+                <h2 class="slider-h2">Find. Follow. Favorite.</h2>
+                <p class="slider-text mobile-text">Save your favorites and share your style.</p> 
+                <a href="#" class="mobile-app-link"><img src="img/app-store.png" alt=""></a><a href="#" class="mobile-app-link"><img src="img/google-play.png" alt=""></a>
+           </div>                     
+       </section>
+<!--FOOTER-->
+        <footer class="footer">footer</footer>
+    </div>
 </body>
+
 </html>

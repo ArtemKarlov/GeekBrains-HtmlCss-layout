@@ -80,6 +80,7 @@ body {
 .slider-content {
     width: 458px;
     margin-top: 287px;
+    display: inline-block; /* задано, чтобы у второго слайдера не схлопывался margin-top*/
 }
 
 .slider-topic {
@@ -169,8 +170,13 @@ body {
 секция с продуктами
 */
 
-.products-header {
+.products {
     padding-top: 120px;
+    padding-bottom: 90px;
+}
+
+.products-header {
+    margin-bottom: 50px;   
 }
 
 .products-menu {
@@ -204,12 +210,181 @@ body {
 }
 
 .product-item-box {
-    margin-top: 50px;
+/*    margin-top: 50px;*/
     display: flex;
     justify-content:space-between;
+    flex-wrap: wrap;
 }
 
 .product-item {
     width: 270px;
     height: 270px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.product-item-hover {
+    padding-top: 62px;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.product-item-hover-button {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 19px;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+}
+
+.product-item-hover-h2 {
+    color: #212121;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-item-hover-text {
+    width: 206px;
+    color: #6c6c6c;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.product-item:hover {
+    background-image: url(../img/products/back.svg);
+    opacity: 0.1;
+}
+
+/*
+=====================================================================
+секция exclusive
+*/
+
+.exclusive {
+    
+}
+
+.exclusive-item {
+    width: 683px;
+    height: 683px;
+    float: left;
+}
+
+.exclusive-item:first-child {
+    background-color: #e8e9eb;
+    background-image: url(../img/promo-img1.jpg);
+}
+
+.exclusive-item:last-child {
+    background-color: #f7f7f7;
+    background-image: url(../img/promo-img2.jpg);
+}
+
+.exclusive-content {
+    width: 374px;
+    display: inline-block;
+    margin-top: 228px;
+    margin-left: 50px;
+}
+
+.exclusive-topic {
+    color: #1e88e5;
+}
+
+.exclusive-h2 {
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+/*
+=====================================================================
+секция Tranding
+*/
+.tranding {
+/*    padding-bottom: 90px; */
+}
+
+.trending-item {
+    width: 370px;
+    height: 370px;
+    margin-bottom: 30px;
+}
+
+/*
+=====================================================================
+Второй слайдер
+*/
+.slider-2 {
+    background-image: url(../img/slider2-img.jpg);
+}
+
+/*
+=====================================================================
+Exclusive & products
+*/
+
+.exclusive-product-item {
+    width: 570px;
+    height: 570px;
+    float: left;
+    margin-bottom: 30px; /* добавлено, чтобы нижний отступ у блока соответствовал макету, иначе margin-bottom:30px у product-item схлопывается с padding-bottom:90px у products*/
+}
+
+.exclusive-product-item:first-child {
+    margin-right: 30px;
+    background-color: #e9e9e9;
+    background-image: url(../img/promo-mini-img.jpg);
+}
+
+.exclusive-mini-content {
+    width: 332px;
+    display: inline-block;
+    margin-top: 186px;
+    margin-left: 30px;
+}
+
+.mobile {
+    height: 516px;
+    background-color: #f9f4f1;
+    background-image: url(../img/back-img.jpg);
+}
+
+.mobile-content {
+    width: 440px; /* не как в макете, так как не умещается текст заголовка*/
+    display: inline-block;
+    margin-top: 125px;
+}
+
+.mobile-topic {
+    color: #6c6c6c;
+}
+
+.mobile-text { 
+    font-size: 22px;
+}
+
+.mobile-app-link {
+    width: 135px;
+    height: 45px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/*
+=====================================================================
+FOOTER
+*/
+
+.footer {
+    border: 1px solid #000;
 }
