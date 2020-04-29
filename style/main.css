@@ -1,3 +1,6 @@
+/* подключение иконочного шрифта для соц.сетей */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +9,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
-
-/* прекращение обтекания */
+/*=================================================================*/
+/* общие классы */
 .clearfix::after {
     content: "";
     display: table;
@@ -19,6 +22,10 @@ body {
     padding-right: 98px;
 }
 
+.link-site:hover {
+    color: #6c6c6c;
+}
+/*=================================================================*/
 /* внешний контейнер */
 .main-container {
     width: 1366px;
@@ -28,6 +35,7 @@ body {
     background-image:url(../img/back.png);
 }
 
+/*=================================================================*/
 /* слайдер */
 .slider {
     height: 800px;
@@ -397,11 +405,27 @@ FOOTER
     height: 384px;
     padding-bottom: 30px;
     background-color: #f7f7f7;
+    box-sizing: border-box;
+    position: relative;
+}
+.footer-content-box {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-content {
-    float: left;
-    margin-right: 80px; 
+
+}
+.footer-contact-box {
+    width: 220px;
+}
+
+.footer-info-box {
+    width: 422px;
+}
+
+.footer-suscribe-box {
+    width: 370px;
 }
 
 .footer-content-text {
@@ -409,13 +433,74 @@ FOOTER
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
+    margin-top: 22px;
 }
 
 .footer-info {
-    float: left;
+
 }
 
 .footer-info-list {
     list-style-type: none;
 }
 
+.footer-info-link {
+    color: #212121;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.submit {
+    margin-top: 22px;
+}
+
+.submit input {
+    width: 370px;
+    height: 48px;
+    box-sizing: border-box;
+    padding-left: 19px;
+}
+
+.submit input::placeholder {
+    color: #6c6c6c;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.bottom-footer-content {
+    width: 1170px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.copyright-text {
+    color: #6c6c6c;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.social-link {
+    color: #fff;
+    background-color: #6c6c6c;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 28px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.social-link:hover {
+    background-color: #212121;
+}
+
+.terms-link {
+    text-decoration: none;
+}
