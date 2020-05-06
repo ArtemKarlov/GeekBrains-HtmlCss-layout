@@ -571,6 +571,34 @@ FOOTER
     text-transform: uppercase;
 }
 
+.refresh-box {
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.refresh {
+    
+}
+
+.refresh-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    background: none;
+}
+
+.refresh-button:hover {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+}
+
+.refresh-button:active {
+    box-shadow: none;
+}
+
 /*
 =========================================================================
 ========================================================================
