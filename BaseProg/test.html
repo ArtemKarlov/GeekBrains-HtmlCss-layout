@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script>
+    var arr = [];
+    var rounds = 20;
+    var zeros = 0;
+
+    for (var i = 0; i <= rounds; i++) {
+        var n = (Math.round(Math.random() * 36));
+        if (n == 0) {
+            arr.push(0)
+        } // дальше для черного
+        else if ((n == 2) || (n == 4) || (n == 6) || (n == 8) || (n == 10) || (n == 11) || (n == 13) || (n == 15) || (n == 17) || (n == 20) || (n == 22) || (n == 24) || (n == 26) || (n == 28) || (n == 29) || (n == 31) || (n == 33) || (n == 35)) {
+            arr.push(1)
+        } // Ниже для красного
+        else {
+            arr.push(-1)
+        }
+    }
+    alert(arr);
+
+    var streak = 1;
+    var maxstreak = 1;
+
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] == arr[i - 1]) {
+            streak++;
+        } else {
+            if (streak > maxstreak) {
+                maxstreak = streak;
+            }
+            streak = 1;
+        }
+    }
+
+    alert("Максимальное число красных подряд: " + maxstreak)
+</script>

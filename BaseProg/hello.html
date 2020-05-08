@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//        let count  = 0;
+//        let answer = '';
+//
+//        answer = prompt("q1:");
+//        if (answer == 'answer1') {
+//            alert("ok");
+//            count++;
+//        } else {
+//            alert("no");
+//        }
+//        answer = prompt("q2:");
+//        if (answer == 'answer2') {
+//            alert("ok");
+//            count++;
+//        } else {
+//            alert("no");
+//        }
+//        answer = prompt("q3:");
+//        if (answer == 'answer3') {
+//            alert("ok");
+//            count++;
+//        } else {
+//            alert("no");
+//        }
+//        alert(count);
+//======================================================================  
+//        let number = parseInt(prompt("enter number"), 10);
+//        let a1 = 10;
+//        let a2 = 20;
+//        let b1 = 60;
+//        let b2 = 65;
+//        if (((number>a1) && (number<a2)) || ((number>b1) && (number<b2))) {
+//            alert('goal');
+//        } else alert('miss');
+//====================================================================== 
+//        let round = 0;
+//        do {
+//            if (prompt(' y or n ?') == 'y') {
+//                round++;
+//                if ((Math.random() * 6) < 1) {
+//                    alert('fin');
+//                    break;
+//                }
+//            } else {
+//                alert('stoped');
+//                break;
+//            }
+//        } while (true);
+//        
+//        alert(round);
+//===================================================================== 
+		// let sum = parseInt(prompt('сумма вклада:'));
+		// let stavka = parseInt(prompt('годовая ставка, % :'));
+		// let years = parseInt(prompt('срок вклада, лет:'));
+
+		// for (var i = 1; i <= years; i++) {
+		// 	let delta = (sum * stavka) / 100;
+		// 	sum = sum + Math.floor(delta);
+		// 	console.log('========================');
+		// 	console.log('year: ' + i);
+		// 	console.log('delta: ' + delta);
+		// 	console.log('sum: ' + sum);			
+//       }
+
+ //       alert('через '+ years + ' лет на вкладе будет ' + sum + 'руб.');
+//===================================================================== 
+
+// 	let arr = [];
+// 	let rounds = 500;
+// 	let zeros = 0;
+// 	let blackNum = [2, 4, 6, 8, 10, 11, 13 ,15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35];
+// 	let redNum = [1, 3 ,5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
+// 	let maxSequence = 0;
+// 	let sameTogether = 1;
+
+// //заполняем массив числами: -1, 0 , 1. Считаем, что: "-1"-черные, "1"-красные, "0"-ноль.
+// 	for (let i = 0; i < rounds ; i++) {
+// 		arr.push(Math.round(Math.random() * 2 - 1));
+// 		console.log(i+ ': ' + arr[i]);
+// 	}
+// // количество нулей
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (arr[i] == 0) {
+// 			zeros++;
+// 		}
+// 	}
+// // количество -1 подряд
+// 	for (let i = 1; i <= arr.length; i++) {
+// 		if ((arr[i] == arr[i-1]) && (arr[i] == -1)) {
+// 			sameTogether++;
+// 			if (sameTogether > maxSequence) {
+// 				maxSequence = sameTogether;
+// 			}
+// 		} else {
+// 			sameTogether = 1;
+// 		}
+// 	}
+// 	alert('max Sequence of -1: ' + maxSequence);
+// 	alert(blackNum.length);
+// =============================================================================
+
+		function getRandomInt(min, max) {
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+
+		function getCard() {
+			let cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+			return cards[getRandomInt(0, cards.length)];
+		}
+
+		function getSum(arr) {
+			let sum = 0;
+			for (let i = 0; i < arr.length; i++) {
+				let num = Number(arr[i]);
+				if (isNaN(num)) {
+					sum = sum + 10;
+				} else {
+					sum = sum + num;
+				}
+			}
+			return sum;
+		}
+
+		function getStatus() {
+			console.log('dealer: ' + dealer.join(' '));
+			return 'player: ' + player.join(' ');
+		}
+
+
+
+		let dealer = [getCard()];
+		let player = [getCard(), getCard()];
+		// console.log(dealer);
+		// console.log(player);
+		let next = false;
+		do {
+			let answer = prompt(getStatus() + ' Continue? y or n');		
+			if (answer == 'y') {
+				next = true;
+				console.log(next);
+				player.push(getCard());
+			} else {
+				next = false;
+				console.log(next);
+			}
+		} while(next);
+		
+
+
+    </script>
+</body>
+</html>
