@@ -112,7 +112,7 @@
 		}
 
 		function getCard() {
-			let cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+			let cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 			return cards[getRandomInt(0, cards.length)];
 		}
 
@@ -120,38 +120,68 @@
 			let sum = 0;
 			for (let i = 0; i < arr.length; i++) {
 				let num = Number(arr[i]);
-				if (isNaN(num)) {
+				if ((isNaN(num)) && (arr[i] != 'A')) {
 					sum = sum + 10;
-				} else {
+				} else if (!isNaN(num)) {
 					sum = sum + num;
+				}
+			}
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i] == 'A') {
+					if (sum > 10) {
+						sum = sum + 1;
+					} else {
+						sum = sum + 11;
+					}
 				}
 			}
 			return sum;
 		}
 
 		function getStatus() {
-			console.log('dealer: ' + dealer.join(' '));
-			return 'player: ' + player.join(' ');
+			return " dealer's cards: " + dealer.join(' , ') + "\n player's cards: " + player.join(' , ');
 		}
 
 
 
 		let dealer = [getCard()];
 		let player = [getCard(), getCard()];
-		// console.log(dealer);
-		// console.log(player);
-		let next = false;
+		// player = ['J', 'A'];
+		
+		let isContinue = true;
 		do {
-			let answer = prompt(getStatus() + ' Continue? y or n');		
-			if (answer == 'y') {
-				next = true;
-				console.log(next);
-				player.push(getCard());
+			if (getSum(player) == 21) {
+				alert(getStatus() + '\n\n congratulations!');
+				break;
+			} else if (getSum(player) > 21) {
+				alert(getStatus() + '\n\n you lose');
+				break;
 			} else {
-				next = false;
-				console.log(next);
+				isContinue = confirm(getStatus() + ' \n\n Continue?');	
+				if (isContinue) {
+					player.push(getCard());
+				} else {
+					// isContinue = false;
+					while (getSum(dealer) < 17) {
+						dealer.push(getCard());
+					}
+
+					let sumPlayer = getSum(player);
+					let sumDealer = getSum(dealer); 
+					if (sumDealer == 21) {
+						alert(getStatus() + '\n\n Dealer has Black Jack!');
+					} else if (sumDealer > 21) {
+						alert(getStatus() + '\n\n Dealer has overflow');
+					} else if (sumDealer == sumPlayer) {
+						alert(getStatus() + '\n\n No winer');
+					} else if (sumDealer > sumPlayer) {
+						alert(getStatus() + '\n\n Dealer wins');
+					} else {
+						alert (getStatus() + '\n\n You are winer!')
+					}
+				}
 			}
-		} while(next);
+		} while(isContinue);
 		
 
 
